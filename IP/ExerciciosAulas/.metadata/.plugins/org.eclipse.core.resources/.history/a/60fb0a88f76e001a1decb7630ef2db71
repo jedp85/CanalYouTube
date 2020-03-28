@@ -1,0 +1,26 @@
+package classesOneToTen;
+
+class ClassSix {
+	static int f(int a, int[] v) {
+        int b = 0;
+        int i = 0;
+        while (i != v.length) {
+            if (v[i] != a) {
+                b = b + 1;
+            }
+            i = i + 1;
+        }
+        return b;
+    }
+	
+	
+	static int[] subArray(int a, int b, int[] v) {
+		int[] u = new int[b - a + 1];
+        int i = a;
+        while(i != b + 1) {
+        	u[i - a] = v[i];
+            i = i + 1;
+        }
+        return u;
+    }
+}

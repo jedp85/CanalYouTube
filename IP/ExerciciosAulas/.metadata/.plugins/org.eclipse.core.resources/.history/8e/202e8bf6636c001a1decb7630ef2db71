@@ -1,0 +1,12 @@
+package classesOneToTen;
+
+class ClassFive {
+	//create an array composed by a given char x number of times
+	static char[] arrayOfChars(char x, int y) {
+		char[] newArray = new char[y];
+		for(int i = 0; i <= y; i++) {
+			newArray[i] = x;
+		}
+		return newArray;
+	}
+}

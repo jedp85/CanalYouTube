@@ -1,0 +1,15 @@
+package classesOneToTen;
+
+class ClassSix {
+	static int f(int a, int[] v) {
+        int b = 0;
+        int i = 0;
+        while (i != v.length) {
+            if (v[i] != a) {
+                b = b + 1;
+            }
+            i = i + 1;
+        }
+        return b;
+    }
+}

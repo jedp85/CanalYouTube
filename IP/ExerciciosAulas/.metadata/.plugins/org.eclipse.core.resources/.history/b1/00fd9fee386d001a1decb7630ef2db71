@@ -1,0 +1,82 @@
+package classesOneToTen;
+
+class ClassFive {
+	//create an array composed by a given char x number of times
+	static char[] arrayOfChars(char x, int y){
+		char[] newArray = new char[y];
+		for(int i = 0; i < y; i++) {
+			newArray[i] = x;
+		}
+		return newArray;
+	}
+	
+	//given an char a array of chars replace all chars in the array with the char given
+	static void fill(char x, char[] v){
+		for(int i = 0; i < v.length; i++) {
+			if(v[i] != x){
+				v[i] = x;
+			}
+		}
+	}
+		
+	//replace all char's by a different one in an array
+	static void replace(char[] x, char[] y){
+		for(int i = 0; i < y.length; i++){
+			if(x[0] == y[i]){
+				y[i] = x[1];
+			}
+		}
+	}
+	
+	//given a number, create a char array with the following chars in the alphabet
+	static void createAlphabet(char x, int y){
+		char[] newArray = new char[y];
+		newArray[0] = x;
+		for(int i = 0; i < y ; i++){
+			newArray[i] = (char) (x+i);
+		}
+	}
+	
+	//Multiple actions on arrays
+	//Change the first char in an array
+	static char[] changeFisrtOccurence(char x, char[] y) {
+		y[0] = x;
+		return y;
+	}
+	
+	//change the last char in an array 
+	static char[] changeLastOccurence(char[] y, char x) {
+		y[y.length -1] = x;
+		return y;
+	}
+		
+	//change the order of the array from right to left
+	static char[] changeOrderToLeft(char[] y){
+		char[] newArray = new char[y.length];
+		int i = 0;
+		int aux = y.length;
+		while(i != 0){
+			if(i == y.length - 1) {
+				newArray[i] = y[i - i];
+				i = 0;
+			}
+			else {
+			newArray[i] = y[i + 1];
+			}
+			i++;
+		}
+		
+		return newArray;
+	}
+	
+	//change the order of the array from right to left
+	static char[] changeOrderToRight(char x, char[] y){
+		char[] newArray = new char[y.length];
+		for(int i = 0; i < y.length; i++){
+			newArray[i] = y[y.length - i - 1];
+		}
+		return newArray;
+	}
+	
+	
+}

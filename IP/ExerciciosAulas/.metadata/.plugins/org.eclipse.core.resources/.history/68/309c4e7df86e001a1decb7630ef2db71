@@ -1,0 +1,15 @@
+package classesOneToTen;
+
+class ClassSix {
+	//create array of array, matrix
+	static int[][] randomMatrix(int row, int col){
+		int[][] newArray = new int[row][col];
+		for(int i = 0; i < newArray.length; i++){
+			newArray[i][i] = 1 + (int)(Math.random() * 9);
+			for(int e = 0; e < newArray.length; e++){
+				newArray[i][e] = 1 + (int)(Math.random() * 9);
+			}
+		}
+		return newArray;
+	}
+}

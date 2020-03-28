@@ -1,0 +1,22 @@
+package classesOneToTen;
+
+class ClassFive {
+	//create an array composed by a given char x number of times
+	static char[] arrayOfChars(char x, int y){
+		char[] newArray = new char[y];
+		for(int i = 0; i < y; i++) {
+			newArray[i] = x;
+		}
+		return newArray;
+	}
+	
+	//given an char a array of chars replace all chars in the array with the char given
+	static void fill(char x, char[] v){
+		for(int i = 0; i < v.length; i++) {
+			if(v[i] != x){
+				v[i] = x;
+			}
+		}
+	}
+		
+}
